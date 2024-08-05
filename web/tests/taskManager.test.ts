@@ -1,8 +1,4 @@
-// tests/taskManager.test.ts
-
 import { initializeTasks, getActiveTasks, completeTask, getCompletedTasks, getAllTasks, createTask, updateTask, deleteTask } from "@/modules/taskManager";
-
-
 
 describe('Task Manager', () => {
   beforeEach(() => {
@@ -100,5 +96,14 @@ describe('Task Manager', () => {
     expect(activeTasks).toContainEqual(
       expect.objectContaining({ title: 'Basic Git' })
     );
+  });
+
+  // Own Test Case by Arka Prabha Biswas : Prevent duplicate task creation
+  test('should prevent duplicate task creation', () => {
+    createTask('Duplicate Task', 'Duplicate task description', 'Intern', 1);
+    const initialTaskCount = getAllTasks().length;
+    createTask('Duplicate Task', 'Duplicate task description', 'Intern', 1);
+    const finalTaskCount = getAllTasks().length;
+    expect(finalTaskCount).toBe(initialTaskCount + 1); // Only one new task should be created
   });
 });

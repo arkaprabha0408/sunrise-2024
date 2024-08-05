@@ -1,0 +1,38 @@
+.layout {
+  min-height: 100vh;
+  background-color: #f0f2f5; 
+}
+
+.header {
+  background-color: #ffffff; 
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px #f0f1f2;
+}
+
+.title {
+  color: black; 
+  margin: 0;
+  font-size: 36px; 
+  font-weight: bold;
+}
+
+.content {
+  padding: 20px;
+  background-color: #f0f2f5; 
+}
+
+.site-layout-background {
+  background: #fff;
+}
+
+.logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+
+

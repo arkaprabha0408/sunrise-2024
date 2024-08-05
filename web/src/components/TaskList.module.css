@@ -1,0 +1,83 @@
+.taskBoard {
+    padding: 15px;
+  }
+  
+  .card {
+    margin-bottom: 12px;
+    margin-right:12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 105%;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  
+  .taskLabel {
+    font-weight: bold;
+    margin-right: 2px;
+  }
+  
+  .doneButton {
+    margin-left: 8px;
+  }
+  
+  .cardTitle {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .cardDescription {
+    font-size: 12px;
+    flex-grow: 1; 
+  }
+  
+  .title {
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  .taskCount {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 8px;
+    border-radius: 50%;
+    font-size: 14px;
+    color: white;
+    line-height: 24px;
+    text-align: center;
+  }
+  
+  .toDoCount {
+    background-color: grey;
+  }
+  
+  .inProgressCount {
+    background-color: #3b5998;
+  }
+  
+  .completedCount {
+    background-color: green;
+  }
+  
+  .cardDivider {
+    border: none;
+    border-top: 1px solid #020202;
+    margin: 8px 0;
+  }
+  
