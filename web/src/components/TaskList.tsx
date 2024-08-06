@@ -128,8 +128,8 @@ const TaskList: React.FC = () => {
             </Col>
           </Row>
           <Row gutter={16}>
-            {toDoTasksColumns.map((column, columnIndex) => (
-              <Col span={12} key={`todo-column-${columnIndex}`}>
+            {toDoTasksColumns.map((column) => (
+              <Col span={12} key={`todo-column-${column[0]?.id}`}>
                 {column.map(task => (
                   <Card key={task.id} className={styles.card}>
                     <div className={styles.cardHeader}>
@@ -187,8 +187,8 @@ const TaskList: React.FC = () => {
             </Col>
           </Row>
           <Row gutter={16}>
-            {completedTasksColumns.map((column, columnIndex) => (
-              <Col span={12} key={`completed-column-${columnIndex}`}>
+            {completedTasksColumns.map((column) => (
+              <Col span={12} key={`completed-column-${column[0]?.id}`}>
                 {column.map(task => (
                   <Card key={task.id} className={styles.card}>
                     <div className={styles.cardHeader}>
@@ -283,4 +283,3 @@ const TaskList: React.FC = () => {
 };
 
 export default TaskList;
-
