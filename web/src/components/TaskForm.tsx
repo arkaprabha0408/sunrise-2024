@@ -24,7 +24,7 @@ const TaskForm: React.FC<TaskFormProps> = ({ visible, onCreate, onCancel }) => {
 
   return (
     <Modal
-      visible={visible}
+      open={visible}
       title="Create a new task"
       okText="Create"
       cancelText="Cancel"
@@ -32,10 +32,18 @@ const TaskForm: React.FC<TaskFormProps> = ({ visible, onCreate, onCancel }) => {
       onOk={handleCreate}
     >
       <Form form={form} layout="vertical">
-        <Form.Item name="title" label="Title" rules={[{ required: true, message: 'Please input the title of the task!' }]}>
+        <Form.Item
+          name="title"
+          label="Title"
+          rules={[{ required: true, message: 'Please input the title of the task!' }]}
+        >
           <Input />
         </Form.Item>
-        <Form.Item name="description" label="Description" rules={[{ required: true, message: 'Please input the description of the task!' }]}>
+        <Form.Item
+          name="description"
+          label="Description"
+          rules={[{ required: true, message: 'Please input the description of the task!' }]}
+        >
           <Input.TextArea />
         </Form.Item>
       </Form>
@@ -44,3 +52,4 @@ const TaskForm: React.FC<TaskFormProps> = ({ visible, onCreate, onCancel }) => {
 };
 
 export default TaskForm;
+

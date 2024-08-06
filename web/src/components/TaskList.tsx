@@ -129,7 +129,7 @@ const TaskList: React.FC = () => {
           </Row>
           <Row gutter={16}>
             {toDoTasksColumns.map((column, columnIndex) => (
-              <Col span={12} key={columnIndex}>
+              <Col span={12} key={`todo-column-${columnIndex}`}>
                 {column.map(task => (
                   <Card key={task.id} className={styles.card}>
                     <div className={styles.cardHeader}>
@@ -188,7 +188,7 @@ const TaskList: React.FC = () => {
           </Row>
           <Row gutter={16}>
             {completedTasksColumns.map((column, columnIndex) => (
-              <Col span={12} key={columnIndex}>
+              <Col span={12} key={`completed-column-${columnIndex}`}>
                 {column.map(task => (
                   <Card key={task.id} className={styles.card}>
                     <div className={styles.cardHeader}>
@@ -206,7 +206,7 @@ const TaskList: React.FC = () => {
       </Row>
       <Modal
         title="Create Task"
-        visible={isModalVisible}
+        open={isModalVisible}
         onCancel={() => setIsModalVisible(false)}
         footer={[
           <Button key="cancel" onClick={() => setIsModalVisible(false)}>
@@ -243,7 +243,7 @@ const TaskList: React.FC = () => {
       </Modal>
       <Modal
         title="Update Task"
-        visible={isUpdateModalVisible}
+        open={isUpdateModalVisible}
         onCancel={() => setIsUpdateModalVisible(false)}
         footer={[
           <Button key="cancel" onClick={() => setIsUpdateModalVisible(false)}>

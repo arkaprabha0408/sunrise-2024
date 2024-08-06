@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Layout as AntLayout, Menu } from 'antd';
+import { Layout as AntLayout } from 'antd';
 import Typography from '@mui/material/Typography';
 import styles from './layout.module.css';
 
